@@ -19,7 +19,8 @@ The Enhanced Auth API is a web application that provides enhanced authentication
 - Session management
 - Public and private profile visibility settings
 
-![Logo](enhanced)
+
+![project](enhanced.png)
 
 
 ## Setup
