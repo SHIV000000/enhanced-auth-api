@@ -1,0 +1,71 @@
+<!-- enhanced-auth-api\frontend\profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    body {
+      background-image: linear-gradient(to right, #667eea, #764ba2);
+      color: #fff;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="flex justify-center items-center h-screen">
+    <div class="card p-8 rounded-lg shadow-md w-full sm:w-96">
+      <h2 class="text-2xl font-semibold mb-4 text-center">User Profile</h2>
+      <div class="flex justify-center mb-6">
+        <img src="https://via.placeholder.com/150" alt="Profile Photo" class="rounded-full w-24 h-24">
+      </div>
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold mb-2">Name</h3>
+        <p id="name" class="text-gray-300">John Doe</p>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold mb-2">Bio</h3>
+        <p id="bio" class="text-gray-300">I'm a web developer passionate about creating amazing user experiences.</p>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold mb-2">Phone</h3>
+        <p id="phone" class="text-gray-300">+1 123 456 7890</p>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold mb-2">Email</h3>
+        <p id="email" class="text-gray-300">john.doe@example.com</p>
+      </div>
+      <div class="mb-4">
+        <label for="profile-visibility" class="block mb-2 font-semibold">Profile Visibility</label>
+        <div class="flex items-center justify-between">
+          <div>
+            <label class="inline-flex items-center">
+              <input type="radio" id="profile-visibility-public" name="profile-visibility" value="public" class="form-radio text-indigo-500" checked>
+              <span class="ml-2 text-sm text-gray-300">Public</span>
+            </label>
+          </div>
+          <div>
+            <label class="inline-flex items-center">
+              <input type="radio" id="profile-visibility-private" name="profile-visibility" value="private" class="form-radio text-indigo-500">
+              <span class="ml-2 text-sm text-gray-300">Private</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <button id="sign-out-button" class="px-4 py-2 rounded-md bg-red-500 text-white font-semibold">Sign Out</button>
+        <a href="/edit-profile.html" id="edit-profile-link" class="px-4 py-2 rounded-md bg-indigo-500 text-white font-semibold">Edit Profile</a>
+      </div>
+    </div>
+  </div>
+  <script src="profile.js"></script>
+</body>
+</html>

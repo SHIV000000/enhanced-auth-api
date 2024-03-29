@@ -1,0 +1,149 @@
+<!-- enhanced-auth-api\frontend\edit-profile.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom styles */
+      body {
+        background-image: linear-gradient(to right, #667eea, #764ba2);
+        color: #fff;
+      }
+
+      .card {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex justify-center items-center h-screen">
+      <div class="card p-8 rounded-lg shadow-md w-full sm:w-96">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Edit Profile</h2>
+        <form id="edit-profile-form">
+          <div class="mb-4">
+            <label for="photo" class="block mb-2">Profile Photo</label>
+            <div class="flex items-center">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="Profile Photo"
+                class="rounded-full w-16 h-16 mr-4"
+              />
+              <div>
+                <input
+                  type="file"
+                  id="photo"
+                  class="hidden"
+                  accept="image/*"
+                />
+                <label
+                  for="photo"
+                  class="px-4 py-2 rounded-md bg-indigo-500 text-white font-semibold cursor-pointer mb-2"
+                  >Upload Photo</label
+                >
+                <p class="text-sm text-gray-300">or</p>
+                <input
+                  type="text"
+                  id="photo-url"
+                  class="w-full px-4 py-2 rounded-md bg-transparent border border-gray-400 text-white"
+                  placeholder="Enter photo URL"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="name" class="block mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="w-full px-4 py-2 rounded-md bg-transparent border border-gray-400 text-white"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="bio" class="block mb-2">Bio</label>
+            <textarea
+              id="bio"
+              class="w-full px-4 py-2 rounded-md bg-transparent border border-gray-400 text-white"
+              placeholder="Enter your bio"
+            ></textarea>
+          </div>
+          <div class="mb-4">
+            <label for="phone" class="block mb-2">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              class="w-full px-4 py-2 rounded-md bg-transparent border border-gray-400 text-white"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="w-full px-4 py-2 rounded-md bg-transparent border border-gray-400 text-white"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="password" class="block mb-2">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="w-full px-4 py-2 rounded-md bg-transparent border border-gray-400 text-white"
+              placeholder="Enter your new password"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="profile-visibility" class="block mb-2 font-semibold"
+              >Profile Visibility</label
+            >
+            <div class="flex items-center justify-between">
+              <div>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    id="profile-visibility-public"
+                    name="profile-visibility"
+                    value="public"
+                    class="form-radio text-indigo-500"
+                    checked
+                  />
+                  <span class="ml-2 text-sm text-gray-300">Public</span>
+                </label>
+              </div>
+              <div>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    id="profile-visibility-private"
+                    name="profile-visibility"
+                    value="private"
+                    class="form-radio text-indigo-500"
+                  />
+                  <span class="ml-2 text-sm text-gray-300">Private</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="w-full py-2 rounded-md bg-indigo-500 text-white font-semibold"
+          >
+            Save Changes
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="profile.js"></script>
+  </body>
+</html>
