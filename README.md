@@ -8,7 +8,7 @@ The Enhanced Auth API is a web application that provides enhanced authentication
 - Express.js
 - MongoDB
 - HTML
-- CSS
+- Tailwind CSS
 - JavaScript
 
 ## Features
